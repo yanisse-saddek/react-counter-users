@@ -4,7 +4,6 @@ export class Count extends React.Component{
         super()
     }
     render(){
-        console.log("---------------------"+ this.props.list)
         return(
             <div className="app">
                 <h1>Counter</h1>
