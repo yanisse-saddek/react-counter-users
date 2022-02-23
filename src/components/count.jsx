@@ -4,6 +4,7 @@ export class Count extends React.Component{
         super()
     }
     render(){
+        console.log("---------------------"+ this.props.list)
         return(
             <div className="app">
                 <h1>Counter</h1>
@@ -11,7 +12,7 @@ export class Count extends React.Component{
                     <p className="score">{this.props.count}</p>
                     <div className="buttons">
                     <button onClick={this.props.count !== 0 ?this.props.substractFunction : null}>-</button>
-                    <button onClick={this.props.count <= 99? this.props.addFunction: null}>+</button>
+                    <button onClick={this.props.count <= this.props.list -1 ? this.props.addFunction: null}>+</button>
                     </div>
                 </div>
             </div>

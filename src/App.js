@@ -30,11 +30,12 @@ export default class App extends React.Component{
         for(var i=0; i<this.state.count; i++){
           array.push(<p>{data[i].name}</p>)
         }
-          
+
 
       return(
             <div>
-              <Count count={this.state.count} addFunction={this.incrementCount} substractFunction={this.decrementCount}></Count>
+              {console.log(data.length)}
+              <Count list={data.length} count={this.state.count} addFunction={this.incrementCount} substractFunction={this.decrementCount}></Count>
               <p>{array}</p>
             </div>
         )
